@@ -13,8 +13,8 @@ function App() {
   return <>
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="birthday/:name" element={<BirthDay />} />
+      <Route path="/wishyou" element={<Home />} />
+      <Route path="/wishyou/birthday/:name" element={<BirthDay />} />
     </Routes>
   </BrowserRouter>
   </>;
