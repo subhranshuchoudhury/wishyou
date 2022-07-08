@@ -16,7 +16,7 @@ function App() {
   <BrowserRouter>
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/:name" element={<BirthDay />} />
+      <Route exact path="wish/:name" element={<BirthDay />} />
       <Route element={<Notfound />} />
     </Routes>
   </BrowserRouter>
