@@ -1,7 +1,5 @@
-import Home from './Components/Home/Home';
-import BirthDay from './Components/Birthday/BirthdayWish';
+import BirthDay from './Components/Birthday/BirthdayPage';
 import './App.css';
-import Notfound from './Components/NotFound';
 // import { useLocation } from 'react-router-dom';
 
 
