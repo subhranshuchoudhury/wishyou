@@ -12,6 +12,7 @@ import Notfound from './Components/NotFound';
 
 function App() {
   return <>
+  <h1>Hii</h1>
   <BrowserRouter>
     <Routes>
       <Route exact path="/" element={<Home />} />
