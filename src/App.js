@@ -6,6 +6,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Notfound from './Components/NotFound';
 
 
 
@@ -13,8 +14,9 @@ function App() {
   return <>
   <BrowserRouter>
     <Routes>
-      <Route path="/wishyou" element={<Home />} />
-      <Route path="/wishyou/birthday/:name" element={<BirthDay />} />
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/:name" element={<BirthDay />} />
+      <Route element={<Notfound />} />
     </Routes>
   </BrowserRouter>
   </>;
