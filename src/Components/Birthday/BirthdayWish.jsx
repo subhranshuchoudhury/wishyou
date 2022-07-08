@@ -1,9 +1,7 @@
 import './birthday.css'
-import { useParams } from "react-router-dom";
-const BirthDay = ()=> {
-    let params = useParams();
+const BirthDay = (props)=> {
     return <>
-    <h1 className="bpageTitle">Birthday Page of {params.name}</h1>
+    <h1 className="bpageTitle">Birthday Page of {props.name ? props.name : "Error!"}</h1>
     </>
 }
 
