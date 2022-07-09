@@ -241,3 +241,12 @@ a:hover{
     color: #ff1493;
     border: 3px solid #ff1493;
 }
+
+button{
+    cursor: pointer;
+    font-weight: bolder;
+}
+button:hover{
+    background-color: #2a0a0a;
+    color: white;
+}
