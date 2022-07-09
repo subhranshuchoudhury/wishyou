@@ -11,7 +11,7 @@ function BirthdayPage(props) {
         setnames((prev) =>{
             return {...prev,[name]: value};
         });
-        setlink(`?names=${names.field1}&&from=${names.field2}`)
+        setlink(`?from=${names.field2}&&name=${names.field1}`)
   }
 
   return (
