@@ -46,7 +46,10 @@ function BirthdayPage(props) {
       <br></br>
       <input type="text"  name='field1' value={names.field1} onChange={handleParameters} placeholder='To..'></input>
       <input type="text"  name='field2' value={names.field2} onChange={handleParameters} placeholder='From..'></input>
-      <a href={"whatsapp://send?text=https://subhranshuchoudhury.github.io/wishyou?name="+names.field1+"&&from="+names.field2} data-action="share/whatsapp/share">Share via Whatsapp</a>
+      {
+        names.field1 && names.field2 ? <a href={"whatsapp://send?text=https://subhranshuchoudhury.github.io/wishyou?name="+names.field1+"&&from="+names.field2} data-action="share/whatsapp/share">Share via Whatsapp</a> : null
+      }
+      
       </div>
 
       <audio id="HBD" loop>
