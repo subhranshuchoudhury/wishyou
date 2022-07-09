@@ -1,5 +1,17 @@
+import { useState } from 'react';
 import './birthday.css';
+// http://localhost:3000/wishyou?name=chintu&&from=raja
+
 function BirthdayPage(props) {
+
+  const [names, setnames] = useState({field1:"",field2:""});
+  const handleParameters = (event)=> {
+    const {name, value} = event.target;
+        setnames((prev) =>{
+            return {...prev,[name]: value};
+        });
+
+  }
 
   return (
     <div>
@@ -30,7 +42,11 @@ function BirthdayPage(props) {
           <div className="flame5"></div>
         </div>
       </div>
-      <div className="text">May all your dreams come true and May God crown you with all the success in life. Wishing you many returns of this day. Happy birthday! From, Your Name
+      <div className="text">May all your dreams come true and May God crown you with all the success in life. Wishing you many returns of this day. Happy birthday {props.name}! From, {props.from}.
+      <br></br>
+      <input type="text"  name='field1' value={names.field1} onChange={handleParameters} placeholder='To..'></input>
+      <input type="text"  name='field2' value={names.field2} onChange={handleParameters} placeholder='From..'></input>
+      <a href={"whatsapp://send?text=https://subhranshuchoudhury.github.io/?name="+names.field1+"&&from="+names.field2} data-action="share/whatsapp/share">Share via Whatsapp</a>
       </div>
 
       <audio id="HBD" loop>

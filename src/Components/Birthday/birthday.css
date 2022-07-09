@@ -231,3 +231,13 @@ body {
     color: white;
     font-family: 'Pacifico', cursive;
 }
+a{
+    text-decoration: none;
+    color: greenyellow;
+    border: 3px solid greenyellow;
+    margin-left: 5px;
+}
+a:hover{
+    color: #ff1493;
+    border: 3px solid #ff1493;
+}

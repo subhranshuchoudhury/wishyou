@@ -7,9 +7,10 @@ import './App.css';
 
 function App() {
   const name =  new URLSearchParams(window.location.search).get('name');
+  const from =  new URLSearchParams(window.location.search).get('from');
   
   return <>
-    <BirthDay name={name}/>
+    <BirthDay name={name} from={from}/>
   </>;
 }
 
