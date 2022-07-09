@@ -5,12 +5,13 @@ import './birthday.css';
 function BirthdayPage(props) {
 
   const [names, setnames] = useState({field1:"",field2:""});
+  const [link, setlink] = useState("");
   const handleParameters = (event)=> {
     const {name, value} = event.target;
         setnames((prev) =>{
             return {...prev,[name]: value};
         });
-
+        setlink(`?names=${names.field1}&&from=${names.field2}`)
   }
 
   return (
@@ -47,7 +48,7 @@ function BirthdayPage(props) {
       <input type="text"  name='field1' value={names.field1} onChange={handleParameters} placeholder='To..'></input>
       <input type="text"  name='field2' value={names.field2} onChange={handleParameters} placeholder='From..'></input>
       {
-        names.field1 && names.field2 ? <a href={"whatsapp://send?text=https://subhranshuchoudhury.github.io/wishyou?name="+names.field1+"&&from="+names.field2} data-action="share/whatsapp/share">Share via Whatsapp</a> : null
+        names.field1 && names.field2 ? <a href={"whatsapp://send?text=https://subhranshuchoudhury.github.io/wishyou"+link} data-action="share/whatsapp/share">Share via Whatsapp</a> : null
       }
       
       </div>

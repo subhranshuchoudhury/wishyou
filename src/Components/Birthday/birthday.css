@@ -1,7 +1,7 @@
 body {
-    background-image: url("https://www.icegif.com/wp-content/uploads/confetti-icegif-1.gif");
-    /* background-color: #00238c; */
-/* background-image: url("https://www.transparenttextures.com/patterns/xv.png"); */
+    /* background-image: url("https://www.icegif.com/wp-content/uploads/confetti-icegif-1.gif"); */
+    background-color: #00238c;
+background-image: url("https://www.transparenttextures.com/patterns/xv.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
