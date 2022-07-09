@@ -6,7 +6,7 @@ function BirthdayPage(props) {
 
   const [names, setnames] = useState({ field1: "", field2: "" });
   const [link, setlink] = useState("");
-  const [visible,setVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
   const handleParameters = (event) => {
     const { name, value } = event.target;
     setnames((prev) => {
@@ -15,7 +15,7 @@ function BirthdayPage(props) {
   }
 
   const createLink = () => {
-    setlink(`?name=${names.field1}&&from=${names.field2}`)
+    setlink(`?name=${names.field1}&from=${names.field2}`)
     setVisible(true);
 
   }
@@ -51,14 +51,20 @@ function BirthdayPage(props) {
       </div>
       <div className="text">Touch The Cake <br></br>May all your dreams come true and May God crown you with all the success in life. Wishing you many returns of this day. Happy birthday {props.name}! From, {props.from}.
         <br></br>
-        <input type="text" name='field1' value={names.field1} onChange={handleParameters} placeholder='To..'></input>
-        <input type="text" name='field2' value={names.field2} onChange={handleParameters} placeholder='From..'></input>
+        {
+          visible ? null : <div><input type="text" name='field1' value={names.field1} onChange={handleParameters} placeholder='To..'></input>
+            <br></br>
+            <input type="text" name='field2' value={names.field2} onChange={handleParameters} placeholder='From..'></input>
+            <br></br></div>
+        }
+
         {
           visible ? null : <button onClick={createLink}>Create Link</button>
         }
         {
-          visible ? <a href={"whatsapp://send?text=https://subhranshuchoudhury.github.io/wishyou" + link} data-action="share/whatsapp/share">Share via Whatsapp</a> : null
+          visible ? <div><input className='linkBox' value={"https://subhranshuchoudhury.github.io/wishyou"+link}></input><br></br><h3>Copy The Text And Share It</h3></div> : null
         }
+        
       </div>
 
       <audio id="HBD" loop>

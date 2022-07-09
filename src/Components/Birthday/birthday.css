@@ -250,3 +250,11 @@ button:hover{
     background-color: #2a0a0a;
     color: white;
 }
+
+.linkBox{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    padding: 5px;
+}
